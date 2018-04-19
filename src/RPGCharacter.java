@@ -1,15 +1,14 @@
 public class RPGCharacter {
 
-    public String name;
-    public int power;
-    public int intelligence;
-    public int luck;
+    protected String name;
+    protected int power;
+    protected int intelligence;
+    protected int luck;
+    protected Range r;
 
-    public RPGCharacter(String name) {
+    protected RPGCharacter(String name) {
         this.name = name;
-        this.power = power;
-        this.intelligence = intelligence;
-        this.luck = luck;
+        this.r = new Range();
     }
 
     public static void main(String[] args) {
@@ -28,6 +27,8 @@ public class RPGCharacter {
         dwarf.testLuck(elf);
         elf.testLuck(dwarf);
         dwarf.testLuck(orc);
+
+
     }
 
     public void testPower(RPGCharacter second) {

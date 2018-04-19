@@ -1,13 +1,10 @@
-import java.util.Random;
-
 public class Orc extends RPGCharacter {
 
     public Orc(String name) {
         super(name);
-        Random rand = new Random();
-        this.power = rand.nextInt(50) + 50;
-        this.intelligence = rand.nextInt(15) + 5;
-        this.luck = rand.nextInt(99) + 1;
+        this.power = r.generateFromRange(50, 100);
+        this.intelligence = r.generateFromRange(5, 20);
+        this.luck = r.generateFromRange(1, 100);
         //System.out.println(this.name);
         //System.out.println(this.power + " " + this.intelligence + " " + this.luck);
     }
